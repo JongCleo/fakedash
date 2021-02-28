@@ -1,0 +1,28 @@
+.cardStyle {
+  padding: 40px;
+  min-width: 600px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 2px 1px rgb(0 0 0 / 3%), 0 4px 16px rgb(0 0 0 / 4%);
+}
+
+.row {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.header span {
+  margin-right: 8px;
+}
+
+.footer {
+  color: #A9A9A9;
+  font-size: 15px;
+  margin-top: 15px;
+}
