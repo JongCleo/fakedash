@@ -18,7 +18,7 @@ const Card = ({headerText, headerIcon, cornerText, middle, footerText}) => {
         {middle}
 
         <div className = {`${styles.footer} ${styles.row}`}>
-          Note: {footerText}
+          {footerText}
         </div>
     </div>
   )

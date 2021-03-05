@@ -1,8 +1,10 @@
 import React from 'react';
 import Card from './components/Card';
 import RequestsDetail from './components/RequestsDetail';
+import KeyDetail from './components/KeyDetail';
 import styles from './modules/App.module.css';
 import { BsGraphUp } from 'react-icons/bs';
+import { FiKey } from 'react-icons/fi';
 import moment from 'moment';
 
 const App = () => {
@@ -31,7 +33,16 @@ const App = () => {
         headerIcon = {<BsGraphUp />}
         cornerText = {"50/50 requests remaining this hour"}
         middle = { <RequestsDetail data = {generateData()}/>}
-        footerText = "Views and downloads metrics updated every 20 minutes."
+        footerText = {<p> Note: Views and downloads metrics updated every 20 minutes. </p>}
+      />
+
+      <Card
+        headerText = {"Keys"}
+        headerIcon = {<FiKey />}
+        middle = {<KeyDetail />}
+        footerText = {
+          <p style={{margin:0}}> Note: both your <code>Access Key</code> and <code>Secret Key</code> must remain confidential</p>
+        }
       />
     </div>
   );

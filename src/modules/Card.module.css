@@ -1,6 +1,6 @@
 .cardStyle {
   padding: 40px;
-  min-width: 600px;
+  max-width: 600px;
   margin-bottom: 24px;
   box-shadow: 0 2px 2px 1px rgb(0 0 0 / 3%), 0 4px 16px rgb(0 0 0 / 4%);
   background-color: #ffffff;
@@ -22,7 +22,7 @@
 }
 
 .header span {
-  margin-right: 8px;
+  margin-right: 12px;
 }
 
 .footer {
