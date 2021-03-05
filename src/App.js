@@ -1,8 +1,8 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import Card from './components/Card';
-import Stat from './components/Stat';
-import Graph from './components/Graph';
+import RequestsDetail from './components/RequestsDetail';
 import styles from './modules/App.module.css';
+import { BsGraphUp } from 'react-icons/bs';
 import moment from 'moment';
 
 const App = () => {
@@ -27,16 +27,12 @@ const App = () => {
   return (
     <div className={styles.container}>
       <Card
-        requestLimit = {50}
-        footer = "Views and downloads metrics updated every 20 minutes."
-      >
-        <Stat metric = "Requests" count = {90} period = "30 days" />
-        <Graph data = {generateData()} />
-        <Fragment>
-          <Stat metric = "Views" count = {0} period = "30 days" />
-          <Stat metric = "Downloads" count = {0} period = "30 days" />
-        </Fragment>
-      </Card>
+        headerText = {"Requests and Usage"}
+        headerIcon = {<BsGraphUp />}
+        cornerText = {"50/50 requests remaining this hour"}
+        middle = { <RequestsDetail data = {generateData()}/>}
+        footerText = "Views and downloads metrics updated every 20 minutes."
+      />
     </div>
   );
 }

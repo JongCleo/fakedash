@@ -17,6 +17,8 @@
 .header {
   font-size: 28px;
   font-weight: 400;
+  display: flex;
+  align-items: flex-end;
 }
 
 .header span {

@@ -1,3 +1,7 @@
 .statStyle h2 {
-  margin: 0px
+  margin: 0;
+}
+
+.statStyle {
+  margin: 0 0 0 20px;
 }
