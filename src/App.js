@@ -14,7 +14,6 @@ const App = () => {
     for (var i = 0; i < 168; i++ ) {
       const requests = Math.floor(Math.random() * 10);
       const name_str = requests + " requests at " + moment().subtract(i, "hours").format('hA MMMM Do')
-      console.log(name_str )
       data_arr.push({
         name: name_str,
         num_requests: requests
@@ -24,7 +23,7 @@ const App = () => {
     return data_arr
 
   }
-  generateData()
+
   return (
     <div className={styles.container}>
       <Card
