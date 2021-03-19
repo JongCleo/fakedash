@@ -15,18 +15,25 @@
   margin-top: 15px;
   display: flex;
   font-size: 20px;
-  line-height: 24px;
   width:100%;
 }
 
 .copyField input {
+  flex-grow: 1;
+  background-color: #f5f5f5;
+  height: 20px;
+  padding: 6px 48px 6px 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #111111;
   border: 1px solid #767676;
   border-radius: 3px;
-  flex-grow: 1;
+  -webkit-transition: border-color ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s;
-  background-color: #f5f5f5;
 }
+
 .copyField a {
   color: #767676;
-
+  display: inline-flex;
+  align-items: center;
 }
