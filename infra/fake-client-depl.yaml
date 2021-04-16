@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fake-client-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fake-client
+  template:
+    metadata:
+      labels:
+        app: fake-client
+    spec:
+      containers:
+        - name: fake-client
+          image: jongcleo/fake-client
+---          
+apiVersion: v1
+kind: Service
+metadata:
+  name: fake-client-srv
+spec:
+  selector: 
+    app: fake-client
+  ports:
+    - name: fake-client
+      protocol: TCP
+      port: 3001
+      targetPort: 3001
